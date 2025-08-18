@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Schülernachhilfe Karl – Mathe, Latein, Englisch & Deutsch bis Klasse 7 im Kreis Niederrhein Viersen</title>
+  <meta name="description" content="Schülernachhilfe von Karl (10. Klasse) im Kreis Niederrhein Viersen. Bis Klasse 7. 11 € pro Stunde. Fächer: Mathe, Latein, Englisch, Deutsch. Termine per WhatsApp, Telefon oder E-Mail."/>
+  <style>
+    /* ---- Base & Theme ---- */
+    :root {
+      --bg: #0b0c10;
+      --card: #121318;
+      --text: #e7eaf0;
+      --muted: #a8b0bd;
+      --brand: #4f8cff;
+      --brand-2: #67e8f9;
+      --accent: #22c55e;
+      --ring: 0 0 0 3px rgba(79,140,255,.25);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    html { 
+      scroll-behavior: smooth; 
+      scroll-padding-top: 100px; /* extra Puffer für mobile Browserleisten */
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: radial-gradient(1200px 800px at 10% 0%, rgba(79,140,255,.08), transparent 60%),
+                 radial-gradient(1000px 800px at 90% 10%, rgba(103,232,249,.08), transparent 60%),
+                 var(--bg);
+    }
+    a { color: var(--brand-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- Header ---- */
+    .header {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(180%) blur(10px);
+      background: rgba(11,12,16,.6); border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding: 14px 0; flex-wrap: wrap; }
+    .brand { display:flex; gap:12px; align-items:center; font-weight:700; letter-spacing:.3px; }
+    .brand .logo { width:36px; height:36px; border-radius:10px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: var(--shadow); display:grid; place-items:center; color:#001; font-weight:900; }
+    .nav a.btn { background: var(--brand); color:#001; padding:10px 16px; border-radius: 999px; font-weight:700; box-shadow: var(--shadow);text-align: center; border: 1px solid rgba(255,255,255,.1); white-space: nowrap; }
+    .nav a.btn:hover { filter: brightness(1.05); box-shadow: 0 12px 30px rgba(79,140,255,.35); text-decoration:none; }
+    .links { display:flex; gap:20px; align-items:center; flex-wrap: wrap; }
+
+    /* ---- Hero ---- */
+    .hero { padding: 72px 0 36px; }
+    .grid { display:grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items:center; }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: 26px; }
+    h1 { font-size: clamp(28px, 4.6vw, 44px); line-height: 1.15; margin: 0 0 10px; }
+    .lead { color: var(--muted); font-size: clamp(16px, 2.6vw, 19px); margin-bottom: 18px; }
+    .pillbar { display:flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 22px; }
+    .pill { padding: 8px 12px; border-radius: 999px; border:1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.03); }
+    .cta-row { display:flex; gap: 12px; align-items:center; flex-wrap:wrap; }
+    .cta { display:inline-block; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color:#001; padding: 12px 18px; border-radius: 999px; font-weight: 800; letter-spacing:.2px; box-shadow: var(--shadow); border:0; white-space: nowrap; }
+    .cta:hover { transform: translateY(-1px); filter: brightness(1.05); text-decoration:none; }
+    .price { font-weight: 800; color: var(--accent); }
+
+    /* ---- Sections ---- */
+    section { padding: 54px 0; }
+    h2 { font-size: clamp(22px, 3.6vw, 32px); margin: 0 0 14px; }
+    p { margin: 0 0 12px; }
+
+    .list { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin: 14px 0 6px; }
+    .list div { padding: 12px 14px; border: 1px dashed rgba(255,255,255,.12); border-radius: 12px; }
+
+    /* ---- Contact ---- */
+    .contact-card { display:grid; gap: 14px; }
+    .contact-item { display:flex; gap: 10px; align-items:flex-start; padding: 12px 14px; border-radius: 14px; border:1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03); flex-wrap: wrap; }
+    .contact-item strong { display:block; }
+
+    /* ---- Footer ---- */
+    footer { padding: 28px 0 40px; color: var(--muted); border-top: 1px solid rgba(255,255,255,.06); }
+
+    /* ---- Fix: Scroll-Offset für Sticky Navbar ---- */
+    section[id] {
+      scroll-margin-top: 80px;
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .links { gap: 14px; }
+    }
+
+    @media (max-width: 600px) {
+      .wrap { padding: 0 14px; }
+      .nav { flex-direction: column; align-items: center; gap: 12px; }
+      .links { flex-direction: column; align-items: center; width: 100%; }
+      .links a { width: 100%; text-align: center; }
+      .list { grid-template-columns: 1fr; }
+      h1 { font-size: 24px; }
+      .lead { font-size: 15px; }
+      .cta-row { flex-direction: column; align-items: stretch; }
+      .cta { text-align: center; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">SK</div>
+          <span>Schülernachhilfe Kempen/Krefeld</span>
+        </div>
+        <div class="links">
+          <a href="#ueber-mich">Über mich</a>
+          <a href="#kontakt">Kontakt</a>
+          <a href="#kontakt" class="cta" aria-label="Jetzt buchen">Jetzt buchen</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="wrap grid">
+        <div class="card">
+          <h1>Nachhilfe bis Klasse 7 im Kreis Kempen und Krefeld – qualifiziert & verständlich</h1>
+          <p class="lead">Ich bin <strong>Karl</strong> (10. Klasse) und helfe gerne Schülern in <strong>Mathe, Latein, Englisch</strong> und <strong>Deutsch</strong>. Angebot <strong>ausschließlich bis Klassenstufe 7</strong>. Ruhig erklärt, Schritt für Schritt, damit's klick macht.</p>
+          <div class="pillbar" role="list" aria-label="Fächerliste">
+            <span class="pill" role="listitem">Mathe</span>
+            <span class="pill" role="listitem">Latein</span>
+            <span class="pill" role="listitem">Englisch</span>
+            <span class="pill" role="listitem">Deutsch</span>
+          </div>
+          <p><span class="price">12,50 €</span> pro 60 Minuten. Nur in <strong>Kempen/Krefeld</strong> und <strong>nur bis zur 7. Klasse</strong>. Termine flexibel nach Absprache.</p>
+          <div class="cta-row">
+            <a class="cta" href="#kontakt">Jetzt buchen</a>
+            <span style="color:var(--muted)">Qualifikationen teile ich auf Anfrage gern mit.</span>
+          </div>
+        </div>
+        <div class="card" aria-labelledby="vorteile-heading">
+          <h2 id="vorteile-heading">Warum Nachhilfe bei mir?</h2>
+          <div class="list">
+            <div>
+              <strong>Schülernähe</strong>
+              <p>Ich bin selber noch Schüler kenne die Anforderungen aus dem Schulalltag. Die behandelten Themen liegen daher auch nicht allzu lange von meiner Klassenstufe entfernt.</p>
+            </div>
+            <div>
+              <strong>Klar & strukturiert</strong>
+              <p>Einfache Schritte, viele Beispiele und kleine Übungen für gute Ergebnisse.</p>
+            </div>
+            <div>
+              <strong>Nur vor Ort</strong>
+              <p>Nachhilfe findet nur in Kempen und Krefled statt.</p>
+            </div>
+            <div>
+              <strong>Fairer Preis</strong>
+              <p>Nur 12,50 € pro Stunde </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Über mich -->
+    <section id="ueber-mich">
+      <div class="wrap">
+        <div class="card">
+          <h2>Über mich</h2>
+          <p>Hey! Ich bin Karl und gehe in die 10. Klasse. Es macht mir Spaß anderen Schülern zu helfen. Ich erkläre verständlich, geduldig und passe mich deinem Tempo an. Ich erstelle vor den Nachhilfestunden passendes Arbeitsmaterial und mache mir viele Gedanken, damit bestmögliche Ergebnisse erzielt werden. Die Nachhilfe biete ich ausschließlich für Schüler <strong>bis zur 7. Klasse</strong> an.</p>
+          <p style="color:var(--muted)">Meine Qualifikationen und Erfahrungen sende ich dir gerne <strong>auf Anfrage</strong> zu.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" aria-labelledby="kontakt-heading">
+      <div class="wrap grid">
+        <div class="card">
+          <h2 id="kontakt-heading">Kontakt & Buchung</h2>
+          <p>Schreibe mir und wir klären schnell die passenden Termine. Bitte gib <strong>Fach</strong>, <strong>Klassenstufe (max. 7)</strong> und wann du Zeit hast an.</p>
+
+          <div class="contact-card">
+            <div class="contact-item">
+              <div aria-hidden="true">📱</div>
+              <div>
+                <strong>WhatsApp</strong>
+                <p><a id="wa" href="https://wa.me/4915172534583" target="_blank" rel="noopener">WhatsApp Chat öffnen</a></p>
+                
+              </div>
+            </div>
+            <div class="contact-item">
+              <div aria-hidden="true">☎️</div>
+              <div>
+                <strong>Telefon</strong>
+                <p><a href="tel:+49-151-72534583">+49 151 72534583</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div aria-hidden="true">✉️</div>
+              <div>
+                <strong>E-Mail</strong>
+                <p><a href="mailto:karl.nachhilfe@gmail.com?subject=Nachhilfe%20Anfrage">karl.nachhilfe@example.com</a></p>
+              </div>
+            </div>
+          </div>
+
+          <p style="margin-top:10px;color:var(--muted)">Hinweis: Nachhilfe findet <strong>nur</strong> im Kreis Kempen und Krefled statt und nur für Schüler <strong>bis Klasse 7</strong>.</p>
+        </div>
+
+        <div class="card" aria-labelledby="faq-heading">
+          <h2 id="faq-heading">FAQ kurz & knapp</h2>
+          <p><strong>Was biete ich alles an?</strong><br>Neben gewöhnlicher Nachhilfe helfe ich auch gerne gezielt bei Hausaufgaben und Referaten und gebe Tipps für mehr Verständnis.</p>
+          <p><strong>Kann man auch für mehrere Fächer Nachhilfe buchen?</strong><br>Ja! Gerne gebe ich auch Nachhilfe in 2 der oben genannten Fächern. Die Fächer sind dann von Stunde zu Stunde nach Wunsch variabel.</p>
+          <p><strong>Wie buche ich?</strong><br>Einfach per WhatsApp, Telefon oder E-Mail melden – ich antworte so schnell wie möglich.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap" role="contentinfo">
+      <p>© <span id="year"></span> Karl – Schülernachhilfe im Kreis Niederrhein Viersen <strong>bis Klasse 7</strong>. Alle Preise inkl. ggf. anfallender Fahrtkosten nach Absprache.</p>
+      <p style="margin-top:6px">Datenschutz: Es werden auf dieser Seite keine personenbezogenen Daten gespeichert. Kontakt erfolgt freiwillig über Anruf, E-Mail oder WhatsApp.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamisches Jahr
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ---- Fix: Dynamischer Offset bei internen Anker-Links ----
+    (function () {
+      const header = document.querySelector('.header');
+
+      function headerHeight() {
+        return header ? header.offsetHeight : 0;
+      }
+
+      function prefersReducedMotion() {
+        return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      }
+
+      function scrollWithOffset(targetEl) {
+        if (!targetEl) return;
+        const rectTop = targetEl.getBoundingClientRect().top + window.pageYOffset;
+        const extraOffset = window.innerWidth < 600 ? 30 : 10; // mehr Luft auf Mobile
+        const y = rectTop - headerHeight() - extraOffset;
+        window.scrollTo({
+          top: Math.max(0, y),
+          behavior: prefersReducedMotion() ? 'auto' : 'smooth'
+        });
+      }
+
+      // Klicks auf interne Links abfangen
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        const hash = a.getAttribute('href');
+        if (!hash || hash.length < 2) return;
+        a.addEventListener('click', function (e) {
+          const id = this.getAttribute('href').slice(1);
+          const target = document.getElementById(id);
+          if (target) {
+            e.preventDefault();
+            scrollWithOffset(target);
+            history.pushState(null, '', '#' + id);
+          }
+        });
+      });
+
+      // Beim Laden mit Hash korrekt positionieren
+      window.addEventListener('load', () => {
+        if (location.hash && location.hash.length > 1) {
+          const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+          if (target) {
+            setTimeout(() => scrollWithOffset(target), 0);
+          }
+        }
+      });
+
+      // Bei Hashchange (Back/Forward)
+      window.addEventListener('hashchange', () => {
+        if (location.hash && location.hash.length > 1) {
+          const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+          if (target) scrollWithOffset(target);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
